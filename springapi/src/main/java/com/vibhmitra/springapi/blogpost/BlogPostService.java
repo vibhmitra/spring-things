@@ -20,4 +20,8 @@ public class BlogPostService {
     public List<BlogPost> getPosts() {
         return blogPostRepository.findAll();
     }
+
+    public void addNewBlogPost(BlogPost blogPost) {
+        System.out.println(blogPost);
+    }
 }
