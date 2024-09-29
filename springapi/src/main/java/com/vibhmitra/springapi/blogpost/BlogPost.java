@@ -2,8 +2,20 @@ package com.vibhmitra.springapi.blogpost;
 
 import java.time.*;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.SequenceGenerator;
+import jakarta.persistence.Table;
+
+@Entity
+@Table
 public class BlogPost {
 
+    @Id
+    @SequenceGenerator(name = "blogPost_sequence", sequenceName = "blogPost_sequence", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "blogPost_sequence")
     private Long id;
     private String title;
     private String author;
