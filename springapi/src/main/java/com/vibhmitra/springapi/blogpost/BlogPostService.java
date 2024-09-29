@@ -1,8 +1,12 @@
 package com.vibhmitra.springapi.blogpost;
 
 import java.util.List;
+
+import org.springframework.stereotype.Service;
+
 import java.time.*;
 
+@Service
 public class BlogPostService {
     public List<BlogPost> getPosts() {
         return List.of(
